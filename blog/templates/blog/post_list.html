@@ -4,8 +4,16 @@
     <title>Gusi-lebedi</title>
   </head>
   <body>
-    <p style="font-size:30px;color:red">Hi, Leolka-busyauka!</p></p>
-    <p>La-la-la</p>
+    <header>
+      <h1><a href="/">DjangoGirlsBlog</a></h1>  
+    </header>
+    {%for post in posts%}
+      <article>
+        <time>published: {{post.published_date}}</time>
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>{{post.text|linebreaksbr}}</p>
+      </article>
+    {%endfor%}
   </body>
 <html>
 <body>
